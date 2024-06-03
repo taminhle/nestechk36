@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký học viên</title>
+    <style>
+        /* Định dạng cơ bản cho toàn trang */
+        
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* Định dạng cho form đăng ký */
+        
+        .register-form {
+            background-color: #FFFFCC;
+            /* Màu nền của form */
+            padding: 20px;
+            /* Khoảng cách bên trong của form */
+            width: 350px;
+            /* Chiều rộng của form */
+            border: 1px solid #ccc;
+            /* Đường viền của form */
+            margin: auto;
+            /* Căn giữa form */
+        }
+        /* Định dạng tiêu đề của form */
+        
+        .register-form h2 {
+            background-color: #CCFFCC;
+            /* Màu nền của tiêu đề */
+            padding: 10px;
+            /* Khoảng cách bên trong của tiêu đề */
+            text-align: center;
+            /* Căn giữa nội dung của tiêu đề */
+            margin: -20px -20px 20px -20px;
+            /* Khoảng cách bên ngoài của tiêu đề */
+        }
+        /* Định dạng cho các hàng trong form */
+        
+        .form-row {
+            display: flex;
+            /* Sử dụng Flexbox để căn chỉnh các phần tử */
+            align-items: center;
+            /* Căn giữa theo chiều dọc */
+            margin-bottom: 10px;
+            /* Khoảng cách dưới mỗi hàng */
+        }
+        
+        .form-row label {
+            width: 100px;
+            /* Chiều rộng của nhãn */
+        }
+        /* Định dạng cho các trường nhập liệu và danh sách lựa chọn */
+        
+        .form-row input[type="text"],
+        .form-row input[type="email"],
+        .form-row input[type="date"],
+        .form-row select {
+            flex: 1;
+            /* Để các trường nhập liệu chiếm toàn bộ khoảng trống còn lại */
+            padding: 5px;
+            /* Khoảng cách bên trong của các trường */
+            border: 1px solid #ccc;
+            /* Đường viền của các trường */
+        }
+        /* Định dạng cho các nút radio */
+        
+        .form-row .gender-inputs {
+            display: flex;
+            /* Sử dụng Flexbox cho nhóm radio */
+            flex: 1;
+            /* Chiếm toàn bộ khoảng trống còn lại */
+        }
+        
+        .form-row .gender-inputs input[type="radio"] {
+            margin-right: 5px;
+            /* Khoảng cách bên phải của nút radio */
+        }
+        /* Định dạng cho các nút submit và reset */
+        
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .register-form input[type="submit"],
+        .register-form input[type="reset"] {
+            padding: 10px 20px;
+            /* Khoảng cách bên trong của các nút */
+            border: none;
+            /* Không có đường viền */
+            background-color: #4CAF50;
+            /* Màu nền của nút submit */
+            color: white;
+            /* Màu chữ của các nút */
+            cursor: pointer;
+            /* Con trỏ chuột dạng pointer khi hover */
+        }
+        
+        .register-form input[type="reset"] {
+            background-color: #f44336;
+            /* Màu nền của nút reset */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Form đăng ký học viên -->
+    <form class="register-form">
+        <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+
+        <!-- Trường nhập họ và tên -->
+        <div class="form-row">
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <!-- Trường nhập ngày sinh -->
+        <div class="form-row">
+            <label for="dob">Ngày sinh:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <!-- Lựa chọn giới tính -->
+        <div class="form-row">
+            <label>Giới tính:</label>
+            <div class="gender-inputs">
+                <input type="radio" id="male" name="gender" value="Nam" required>
+                <label for="male" style="display: inline;">Nam</label>
+                <input type="radio" id="female" name="gender" value="Nữ" required>
+                <label for="female" style="display: inline;">Nữ</label>
+            </div>
+        </div>
+
+        <!-- Trường nhập địa chỉ -->
+        <div class="form-row">
+            <label for="address">Địa chỉ:</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+
+        <!-- Danh sách lựa chọn lớp -->
+        <div class="form-row">
+            <label for="class">Lớp:</label>
+            <select id="class" name="class" required>
+                <option value="">-- Chọn lớp --</option>
+                <option value="Lớp 1">Lớp 1</option>
+                <option value="Lớp 2">Lớp 2</option>
+                <option value="Lớp 3">Lớp 3</option>
+                <!-- Thêm các lớp khác nếu cần -->
+            </select>
+        </div>
+
+        <!-- Trường nhập email -->
+        <div class="form-row">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Trường nhập điện thoại -->
+        <div class="form-row">
+            <label for="phone">Điện thoại:</label>
+            <input type="text" id="phone" name="phone" required>
+        </div>
+
+        <!-- Nút gửi form -->
+        <div class="form-actions">
+            <input type="submit" value="Đăng ký">
+            <!-- Nút xóa dữ liệu trong form -->
+            <input type="reset" value="Nhập lại">
+        </div>
+    </form>
+</body>
+
+</html>

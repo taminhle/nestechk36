@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sở thích của bạn</title>
+    <style>
+        /* Định dạng cơ bản cho toàn trang */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E0FFFF;
+            /* Màu nền của trang */
+        }
+        /* Định dạng cho form đăng ký */
+        
+        .register-form {
+            background-color: #FFFFFF;
+            /* Màu nền của form */
+            padding: 20px;
+            /* Khoảng cách bên trong của form */
+            width: 400px;
+            /* Chiều rộng của form */
+            border: 1px solid #ccc;
+            /* Đường viền của form */
+            margin: auto;
+            /* Căn giữa form */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            /* Hiệu ứng đổ bóng */
+        }
+        /* Định dạng tiêu đề của form */
+        
+        .register-form h2 {
+            background-color: #FF4500;
+            /* Màu nền của tiêu đề */
+            padding: 10px;
+            /* Khoảng cách bên trong của tiêu đề */
+            text-align: center;
+            /* Căn giữa nội dung của tiêu đề */
+            margin: -20px -20px 20px -20px;
+            /* Khoảng cách bên ngoài của tiêu đề */
+            color: white;
+            /* Màu chữ của tiêu đề */
+        }
+        /* Định dạng cho các nhãn (label) */
+        
+        .register-form label {
+            display: block;
+            /* Hiển thị như một khối */
+            margin-bottom: 5px;
+            /* Khoảng cách dưới nhãn */
+            color: #0000FF;
+            /* Màu chữ của nhãn */
+        }
+        /* Định dạng cho các trường nhập liệu */
+        
+        .register-form input[type="text"],
+        .register-form input[type="email"] {
+            width: 100%;
+            /* Chiếm toàn bộ chiều rộng của form */
+            padding: 5px;
+            /* Khoảng cách bên trong của các trường */
+            margin-bottom: 10px;
+            /* Khoảng cách dưới các trường */
+            border: 1px solid #ccc;
+            /* Đường viền của các trường */
+        }
+        /* Định dạng cho nhóm sở thích */
+        
+        .register-form .hobbies {
+            display: flex;
+            /* Sử dụng Flexbox để căn chỉnh các phần tử */
+            flex-wrap: wrap;
+            /* Cho phép các phần tử xuống dòng khi quá dài */
+        }
+        
+        .register-form .hobbies label {
+            flex: 1 1 50%;
+            /* Chiều rộng của mỗi nhãn chiếm 50% */
+            display: flex;
+            /* Sử dụng Flexbox để căn chỉnh checkbox và nhãn */
+            align-items: center;
+            /* Căn giữa theo chiều dọc */
+            margin-bottom: 5px;
+            /* Khoảng cách dưới nhãn */
+        }
+        
+        .register-form .hobbies input[type="checkbox"] {
+            margin-right: 5px;
+            /* Khoảng cách bên phải của checkbox */
+        }
+        /* Định dạng cho các nút submit và reset */
+        
+        .register-form .form-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .register-form input[type="submit"],
+        .register-form input[type="reset"] {
+            padding: 10px 20px;
+            /* Khoảng cách bên trong của các nút */
+            border: none;
+            /* Không có đường viền */
+            background-color: #4CAF50;
+            /* Màu nền của nút submit */
+            color: white;
+            /* Màu chữ của các nút */
+            cursor: pointer;
+            /* Con trỏ chuột dạng pointer khi hover */
+        }
+        
+        .register-form input[type="reset"] {
+            background-color: #f44336;
+            /* Màu nền của nút reset */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Form sở thích của bạn -->
+    <form class="register-form">
+        <h2>SỞ THÍCH CỦA BẠN</h2>
+
+        <!-- Trường nhập họ và tên -->
+        <label for="name">Họ và tên</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- Trường nhập email -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Lựa chọn sở thích -->
+        <label>Sở thích</label>
+        <div class="hobbies">
+            <label><input type="checkbox" name="hobbies" value="Thể thao"> Thể thao</label>
+            <label><input type="checkbox" name="hobbies" value="Âm nhạc"> Âm nhạc</label>
+            <label><input type="checkbox" name="hobbies" value="Đọc sách"> Đọc sách</label>
+            <label><input type="checkbox" name="hobbies" value="Lướt web"> Lướt web</label>
+            <label><input type="checkbox" name="hobbies" value="Chơi game"> Chơi game</label>
+            <label><input type="checkbox" name="hobbies" value="Điện ảnh"> Điện ảnh</label>
+            <label><input type="checkbox" name="hobbies" value="Du lịch"> Du lịch</label>
+        </div>
+
+        <!-- Nút gửi form -->
+        <div class="form-actions">
+            <input type="submit" value="Gửi thông tin">
+            <!-- Nút xóa dữ liệu trong form -->
+            <input type="reset" value="Nhập lại">
+        </div>
+    </form>
+</body>
+
+</html>
