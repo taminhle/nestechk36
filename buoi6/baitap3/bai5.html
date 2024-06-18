@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4CAF50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        label {
+            margin-right: 10px;
+        }
+        
+        input,
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px 0;
+            flex: 1;
+            max-width: 100px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+        
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 0;
+        }
+        
+        .result.show {
+            opacity: 1;
+        }
+        
+        .swap-btn {
+            flex: 0 0 auto;
+            padding: 10px 20px;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ứng dụng chuyển đổi tiền tệ</h1>
+        <form id="currency-form" class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" placeholder="1">
+            <label for="from-currency">From</label>
+            <select id="from-currency">
+                <option value="VND">Vietnam</option>
+                <option value="USD">USD</option>
+            </select>
+            <label for="to-currency">To</label>
+            <select id="to-currency">
+                <option value="USD">USD</option>
+                <option value="VND">Vietnam</option>
+            </select>
+            <button type="button" class="swap-btn" onclick="swapCurrencies()">⇆</button>
+            <button type="button" onclick="convertCurrency()">Convert</button>
+        </form>
+        <div class="result" id="result">Kết quả chuyển đổi sẽ hiển thị ở đây.</div>
+    </div>
+    <script src="bai5.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            display: flex;
+            background-color: #64FBDB;
+            padding: 10px;
+            border: 0px solid black;
+            /* Thêm border cho header */
+            justify-content: center;
+            /* Căn chữ nằm giữa */
+        }
+        
+        .logo {
+            flex: 0 0 30%;
+            /* Chia logo chiếm 30% của header */
+            text-align: center;
+            padding: 5px;
+            /* Thêm padding để tạo khoảng cách giữa logo và nền */
+        }
+        
+        .banner {
+            flex: 0 0 70%;
+            /* Chia banner chiếm 70% của header */
+            text-align: center;
+            padding: 5px;
+            /* Thêm padding để tạo khoảng cách giữa banner và nền */
+        }
+        
+        nav {
+            background-color: #01FCFF;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            border: 1px solid black;
+            /* Thêm border cho nav */
+            justify-content: center;
+        }
+        
+        main {
+            display: flex;
+            min-height: 500px;
+            border: 1px solid black;
+            /* Thêm border cho main */
+            justify-content: center;
+        }
+        
+        aside,
+        section {
+            padding: 10px;
+            border: 1px solid #b41111;
+            box-sizing: border-box;
+        }
+        
+        aside {
+            flex: 1;
+            background-color: #a59613;
+            justify-content: center;
+        }
+        
+        section {
+            flex: 2;
+            background-color: #be1a1a;
+        }
+        
+        footer {
+            background-color: #ff6347;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            border: 0px solid black;
+            /* Thêm border cho footer */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">LOGO</div>
+        <div class="banner">BANNER</div>
+    </header>
+    <nav>HEAD-LINK</nav>
+    <main>
+        <aside class="left">Left</aside>
+        <section class="content">Content</section>
+        <aside class="right">Right</aside>
+    </main>
+    <footer>Footer</footer>
+</body>
+
+</html>
